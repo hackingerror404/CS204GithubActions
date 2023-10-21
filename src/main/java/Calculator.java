@@ -1,3 +1,5 @@
+import java.util.Random;
+
 // Comment for Step 9, but again
 class Calculator {
 
@@ -86,7 +88,16 @@ class Calculator {
     if you run this function twice with the same String input, it must return 2 unique String IDs
      */
     String createUniqueID(String n){
-        return null;
+        Random random = new Random();
+        String randomChars = "abcdefghijklmnopqrstuvwxyz0123456789";
+        StringBuilder uniqueID = new StringBuilder(n);
+
+        for (int i = 0; i < 10; i++) {
+            char randomChar = randomChars.charAt(random.nextInt(randomChars.length()));
+            uniqueID.append(randomChar);
+        }
+
+        return uniqueID.toString();
     }
 
 
