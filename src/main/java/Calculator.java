@@ -1,5 +1,5 @@
 import java.util.Random;
-// comment
+// comment2
 class Calculator {
 
     Calculator(){
